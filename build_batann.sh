@@ -84,6 +84,7 @@ echo "===== 8. 设置测试数据集 ====="
 cd ~/
 if [ ! -d "big-ann-benchmarks" ]; then git clone https://github.com/harsha-simhadri/big-ann-benchmarks; fi
 cd big-ann-benchmarks
+sudo apt install python3-pip -y
 pip3 install -r requirements_py3.10.txt
 # 如果需要自动生成数据，请取消下行注释
 # python3 create_dataset.py --dataset bigann-10M
