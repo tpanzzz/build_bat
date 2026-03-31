@@ -44,7 +44,7 @@ sudo cmake --build build/ -j$(nproc) --target install
 cd ~/workspace
 
 echo "===== 7. 构建 BatANN (rdma_anns) ====="
-if [ ! -d "rdma_anns" ]; then git clone https://github.com/namanhboi/rdma_anns.git; fi
+if [ ! -d "rdma_anns" ]; then git clone https://github.com/tpanzzz/rdma_anns.git; fi
 cd rdma_anns
 
 # 核心修改：不带 --remote，确保回滚到主仓库记录的稳定版本
@@ -87,6 +87,6 @@ cd big-ann-benchmarks
 sudo apt install python3-pip -y
 pip3 install -r requirements_py3.10.txt
 # 如果需要自动生成数据，请取消下行注释
-# python3 create_dataset.py --dataset bigann-10M
+python3 create_dataset.py --dataset bigann-10M
 
 echo "🎉 所有流程已自动化完成！"
